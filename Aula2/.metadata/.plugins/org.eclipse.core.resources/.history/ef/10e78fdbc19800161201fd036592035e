@@ -1,0 +1,63 @@
+package Exercicio6;
+
+public class Main {
+	public static void main(String[] args)
+	{
+		Estoque estoque1 = new Estoque();
+		estoque1.setNome("Impressora Jato de Tinta");
+		estoque1.setQtdAtual(11);
+		estoque1.setQtdMinima(6);
+		
+		Estoque estoque2 = new Estoque();
+		estoque2.setNome("Monitor LCD 17 polegadas");
+		estoque2.setQtdAtual(11);
+		estoque2.setQtdMinima(13);
+		
+		Estoque estoque3 = new Estoque();
+		estoque3.setNome("Mouse");
+		estoque3.setQtdAtual(6);
+		estoque3.setQtdMinima(2);
+		
+		
+		System.out.println("----------A----------");
+		//A.
+		System.out.println("A.Dar baixa em 5 unidades de estoque1");
+		System.out.println(estoque1.darBaixa(5));
+		System.out.println("Novo estoque: " + estoque1.getQtdAtual());
+		
+		System.out.println("----------B----------");
+		//B.
+		System.out.println("B.Fazer a reposição de 7 unidades de estoque2");
+		estoque2.repor(7);
+		System.out.println("Novo estoque de estoque2: " + estoque2.getQtdAtual());
+		System.out.println("----------C----------");
+		//C
+		System.out.println("Dar baixa em 4 unidades de estoque3:");
+		System.out.println(estoque3.darBaixa(4));
+		System.out.println("Novo estoque: " + estoque3.getQtdAtual());
+		System.out.println("----------D----------");
+		
+		//D - Exibir a saída do método precisaRepor dos 3 objetos
+		System.out.println("Precisa repor estoque1?: ");
+		System.out.println(estoque1.precisaRepor());
+		System.out.println("Precisa repor estoque2?: ");
+		System.out.println(estoque2.precisaRepor());
+		System.out.println("Precisa repor estoque2?: ");
+		System.out.println(estoque3.precisaRepor());
+		
+		
+		System.out.println("----------E----------");
+		//E.Exibir a saída do método mostra para apresentar as informações sobre os 3 objetos.
+		
+		System.out.println(estoque1.mostra());
+		System.out.println(estoque2.mostra());
+		System.out.println(estoque3.mostra());
+		
+		
+		
+		
+	}
+	
+	}
+
+

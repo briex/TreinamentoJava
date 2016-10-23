@@ -1,0 +1,14 @@
+package Aula5.Exercicio8;
+
+public class Main {
+	public static void main (String[] args)
+	{
+		Moto moto = new Moto("Kawasaky", "Ninja", "Verde", 0, 5);
+		moto.marchaAcima(1);
+		moto.marchaAcima(2);
+		moto.marchaAbaixo(1);
+		System.out.println(moto.imprimir());
+	}
+
+}
+

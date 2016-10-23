@@ -1,0 +1,13 @@
+package Exercicio4;
+
+public class Main {
+	public static void main(String[] args)
+	{
+		Lampada lamp = new Lampada();
+		lamp.liga();
+		
+		System.out.println("A lampada está " + lamp.observa());
+	}
+	}
+
+

@@ -1,0 +1,37 @@
+package Aula3.Exercicio4;
+
+public class Chernobyl {
+	private int ciclos;
+	private double massaInicial;
+	
+	public double getMassaInicial() 
+	{
+		return massaInicial;
+	}
+	
+	public double DegradaMaterial(double massa) 
+	{
+		massaInicial = massa;		
+		
+		while (massa >= 0.5)
+		{
+			massa = (massa/2);
+			ciclos = ciclos + 50;
+		}
+		return massa;
+	}
+	
+	public String calculaTempo()
+	{
+	    int segundos = ciclos; 
+	    int segundo = segundos % 60; 
+	    int minutos = segundos / 60;
+	    int minuto = minutos % 60; 
+	    int hora = minutos / 60; 
+		String hms = String.format ("%02d:%02d:%02d", hora, minuto, segundo);
+		return hms;
+	}
+		
+	
+
+}
