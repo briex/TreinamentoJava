@@ -1,0 +1,36 @@
+/*
+	Adicione um método na classe Conta que atualiza essa conta de acordo com uma taxa percentual fornecida.
+	Crie duas subclasses da classe Conta:  ContaCorrente e ContaPoupanca.  Ambas terão o método atualiza reescrito: 
+  	A ContaCorrente deve ser atualizada com o dobro da taxa e a ContaPoupanca com o triplo da taxa. Além disso, 
+  	a ContaCorrente deve reescrever o método deposita, com o objetivo de retirar uma taxa bancária de dez centavos de cada depósito.
+	Crie uma classe TestaContas com o método main e instancie estas classes, atualize-as e veja o resultado imprimindo o saldo.
+
+
+*/
+package Exercicio2;
+
+public class Conta {
+
+	private float saldo;
+	
+	
+	
+	public float getSaldo() {
+		return saldo;
+	}
+	public void setSaldo(float saldo) {
+		this.saldo += saldo;
+	}
+	public void depositar(float valor)
+	{
+		this.saldo+=valor;
+	}
+	public void sacar(float valor) 
+	{
+		this.saldo += valor;
+	}
+	public void atualizar ()
+	{
+		this.saldo += (this.saldo*0.02f);
+	}
+}

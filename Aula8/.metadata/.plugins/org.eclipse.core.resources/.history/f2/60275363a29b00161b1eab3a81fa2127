@@ -1,0 +1,27 @@
+package Exercicio1;
+
+public class Peixe extends Animal {
+	
+	public Peixe (String nome, String caracteristica, int comprimento, float velocidade)
+	{
+		super();
+	}
+	
+	
+	void alteraCaracteristica(String caracteristica)
+	{
+		
+	}
+	
+	public String caracteristica( )
+	{
+		// retorna a características de um determinado peixe;
+	}
+	
+	public void dados( )
+	{
+		// imprimir na tela todos os dados
+	}
+
+
+}

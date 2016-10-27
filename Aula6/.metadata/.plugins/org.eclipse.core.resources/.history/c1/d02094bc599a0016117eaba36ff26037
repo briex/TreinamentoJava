@@ -1,0 +1,13 @@
+package Exercicio1;
+
+public class Main {
+
+	public static void main(String[] args) {
+		CaixaEletronico caixa = new CaixaEletronico();
+		
+		System.out.println(caixa.efetuaSaque(5));
+		//System.out.println(caixa.calculaSaldo());
+
+	}
+
+}

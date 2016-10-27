@@ -1,0 +1,23 @@
+package Exercicio1;
+
+public class Mamifero {
+	
+	Mamifero (String nome, String cor, Stringalimento,int comprimento, float velocidade, int patas);
+	
+	
+	
+	void alteraAlimento(String alimento)
+	{
+		
+	}
+	String alimento( )
+	{
+		// retorna o alimento de um determinado uso
+	}
+	void dados( )
+	{
+		// imprimir na tela todos os dados
+	}
+
+
+}

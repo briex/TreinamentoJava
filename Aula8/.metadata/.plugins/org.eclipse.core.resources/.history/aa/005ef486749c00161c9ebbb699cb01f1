@@ -1,0 +1,16 @@
+package Exercicio2;
+
+public class ContaPoupanca extends Conta 
+{
+
+	public ContaPoupanca() 
+	{
+		super();
+	}
+	@Override
+	public void atualizar()
+	{
+		Conta conta = new Conta();
+		conta.setSaldo(conta.getSaldo() + (conta.getSaldo() * 0.75f));
+	}
+}

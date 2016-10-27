@@ -1,0 +1,55 @@
+package Exercicio1;
+
+public class Animal {
+	
+	String nome;
+	int comprimento;
+	int patas;
+	String cor;
+	String ambiente;
+	float velocidade;
+
+	
+	Animal (String nome, String cor, String ambiente, int comprimento, float velocidade, int patas)
+	{
+		nome = nome;
+		cor = cor;
+		ambiente = ambiente;
+		comprimento = comprimento;
+		velocidade = velocidade;
+		patas = patas;		
+	}
+	
+	void alteraNome(String nome)
+	{
+		
+	}
+	
+	void alteraComprimento(int comprimento)
+	{
+		
+	}
+	
+	void alteraPatas(int patas)
+	{
+		
+	}
+	
+	void alteraCor(String cor)
+	{
+		
+	}
+	
+	void alteraAmbiente(String ambiente)
+	{
+		
+	}
+	
+	void alteraVelocidade(float velocidade)
+	{
+		
+	}
+	void dados( ); // imprime os dados do animal
+
+
+}

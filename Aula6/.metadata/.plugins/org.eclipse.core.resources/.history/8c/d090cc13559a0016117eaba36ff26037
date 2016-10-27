@@ -1,0 +1,80 @@
+package Exercicio1;
+
+import java.util.ArrayList;
+
+public class CaixaEletronico {
+	 private int saldo;
+
+	 ArrayList<Nota> nota = new ArrayList<Nota>();
+	 
+	 Nota notas2 = new Nota(2, 10);
+	 Nota notas5 = new Nota(5, 10);
+	 Nota notas10 = new Nota(10, 10);
+	 Nota notas20 = new Nota(20, 10);
+	 Nota notas50 = new Nota(50, 10);
+	
+	 nota.add(notas2);
+	 nota.add(notas5);
+	 nota.add(notas10);
+	 nota.add(notas20);
+	 nota.add(notas50); 
+	 
+	 public CaixaEletronico()
+	 {
+	
+	 }
+	 	 
+	 public int calculaSaldo ()
+	 { 
+		 for (Nota n : nota)
+		 {
+			saldo += (n.qtdSaldo * n.valor); 
+		 }
+		 
+		 return saldo;
+	 }
+	
+	 public String efetuaSaque(int valor)
+	 {		
+		 
+		 float resto = valor;
+		 
+		 if (valor < calculaSaldo()){
+		  if (nota.get(notas50).qtdSaldo>0)
+		  {
+			  nota.get(notas50).qtdSaldo -= (valor / 50);
+			  resto = valor % 50;	  
+		  }
+	
+		  if (nota.get(notas20).qtdSaldo>0 )
+		  {
+			  nota.get(notas20).qtdSaldo -= (resto / 20);
+			  resto = resto % 20;
+		  }
+		 
+		  if (nota.get(notas10).qtdSaldo>0 )
+		  {
+			  nota.get(notas10).qtdSaldo -= (resto / 10);
+			  resto = resto % 10;
+		  }
+		 	  
+		  if (nota.get(notas5).qtdSaldo>0 && resto % 5 == 0)
+		  {
+			  nota.get(notas5).qtdSaldo -= (resto / 5);
+			  resto = resto % 5;
+		  }
+		  if (nota.get(notas2).qtdSaldo>0 )
+		  {
+			  nota.get(notas2).qtdSaldo -= (resto/2);
+		  }
+		 	 return "Saque efetuado com Sucesso";
+	 	}
+	 	else
+	 	{
+	 		return ("Não possível realizar esta operação");
+	 	}
+		 
+	 }
+
+
+}

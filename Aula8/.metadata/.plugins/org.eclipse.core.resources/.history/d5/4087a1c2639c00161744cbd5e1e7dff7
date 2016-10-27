@@ -1,0 +1,17 @@
+package Exercicio1;
+
+import java.util.ArrayList;
+
+public class Zoo {
+	 private ArrayList<Jaula> jaulas = new ArrayList<>();
+	 
+	 public void addJaula (Jaula jaula)
+	 {
+		 jaulas.add(jaula);
+	 }
+	 public String impressao()
+	 {
+		 for 
+	 }
+
+}

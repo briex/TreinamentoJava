@@ -1,0 +1,24 @@
+package Exercicio2;
+
+public class ContaCorrente extends Conta {
+
+	public ContaCorrente() 
+	{
+		super();
+	}
+	
+	Conta conta = new Conta();
+	
+	@Override
+	public void atualizar()
+	{	
+		conta.setSaldo(conta.getSaldo() + (conta.getSaldo()*0.5f) );
+	}
+	@Override
+	public void depositar(float valor)
+	{
+		conta.depositar(valor - valor*0.10f);
+	}
+	
+
+}

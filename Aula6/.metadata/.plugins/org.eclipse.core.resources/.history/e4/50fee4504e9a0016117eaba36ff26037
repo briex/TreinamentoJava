@@ -1,0 +1,101 @@
+package Exercicio1;
+
+import java.util.ArrayList;
+
+public class CaixaEletronico {
+	 private int saldo;
+	 private int notas2;
+	 private int notas5;
+	 private int notas10;
+	 private int notas20;
+	 private int notas50;
+	 ArrayList<Nota> nota = new ArrayList<Nota>();
+	 
+	 CaixaEletronico()
+	 {
+		 Nota notas2 = new Nota(2, 10);
+		 Nota notas5 = new Nota(5, 10);
+		 Nota notas10 = new Nota(10, 10);
+		 Nota notas20 = new Nota(20, 10);
+		 Nota notas50 = new Nota(50, 10);
+		 
+		 nota.add(notas2);
+		 nota.add(notas5);
+		 nota.add(notas10);
+		 nota.add(notas20);
+		 nota.add(notas50); 
+	 }
+	 	 
+	 public int calculaSaldo ()
+	 {
+		 
+		 for (Nota n : nota)
+		 {
+			saldo += (n.qtdSaldo * n.valor); 
+		 }
+		 
+		 return saldo;
+		 //return (notas2*2)+(notas5*5)+(notas10*10)+(notas20*20)+(notas50*50);
+	 }
+	
+	 public String efetuaSaque(float valor)
+	 {		
+		 String retorno = "";
+		 float resto = valor;
+		 
+		 if (valor < calculaSaldo()){
+		  if (notas50>0)
+		  {
+			  this.notas50 = notas50 - (int) (valor / 50);
+			  resto = valor % 50;	  
+			  retorno += "Notas de 50: "+ (int) (valor / 50);
+		  }
+	
+		  if (notas20>0 )
+		  {
+			  this.notas20 = notas20 - (int) (resto / 20);
+			  resto = resto % 20;
+			  retorno += " Notas de 20: "+ (int) (resto / 20);
+		  }
+		 
+		  if (notas10>0 )
+		  {
+			  this.notas10 = notas10 - (int) (resto / 10);
+			  resto = resto % 10;
+			  retorno += " Notas de 10: "+ (int) (resto / 10);
+		  }
+		 	  
+		  if (notas5 >0 && resto % 5 == 0)
+		  {
+			  this.notas5 = notas5 - (int) (resto / 5);
+			  resto = resto % 5;
+			  retorno += " Notas de 5: "+(int) (resto / 5);
+		  }
+		  if (notas2>0 )
+		  {
+			  this.notas2 = notas2 - (int) (resto/2);
+			  retorno += " Notas de 2: "+ (int) (resto / 2);
+		  }
+		 
+		
+		 return retorno; 
+	 	}
+	 	else
+	 	{
+	 		return ("Não possível realizar esta operação");
+	 	}
+		 
+	 }
+	 public String calculaSaque (int valor) 
+	 {
+		    int Total   = valor;
+	        notas50   = (Total/50);
+	        notas20   = (Total -  notas50*50)/20;
+	        notas10   = (Total - (notas50*50)-(notas20*20))/10;
+	        notas5    = (Total - (notas50*50)-(notas20*20)- (notas10*10))/5;
+	        notas2    = (Total - (notas50*50)-(notas20*20)- (notas10*10)- (notas5*5))/1;
+	        
+	        return ("2: "+notas2 + " 5: " + notas5 + " 10: " + notas5 + " 20: " + notas20 + " 50: " + notas50);
+	 }
+
+}

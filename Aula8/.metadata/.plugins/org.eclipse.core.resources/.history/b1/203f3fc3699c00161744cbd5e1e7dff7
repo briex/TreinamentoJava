@@ -1,0 +1,9 @@
+package Exercicio2;
+
+public class ConntaCorrente {
+
+	public ConntaCorrente() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

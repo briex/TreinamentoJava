@@ -1,0 +1,29 @@
+package Exercicio1;
+
+public class TesteAnimais {
+	
+	public void imprimeAnimais()
+	{
+		Zoo zoo = new Zoo();
+		
+		Peixe peixe = new Peixe("Tubarão", "Cinzento", 300, 1.5f, "Mar", "Barbatana e cauda", "Ronca");
+		Jaula jaula1 = new Jaula(peixe);
+		zoo.addJaula(jaula1);
+		
+		Jaula jaula2 = new Jaula(new Mamifero("Macaco", "Preta", "Vegetais", "Matagal", 80, 1.0f, 4, "guincha"));
+		zoo.addJaula(jaula2);
+		
+		Jaula jaula3 = new Jaula(new Mamifero("Vaca", "Preta", "Vegetais", "Matagal", 100, 1.0f, 4, "Muge"));
+		zoo.addJaula(jaula3);
+		
+		Jaula jaula4 = new Jaula(new Mamifero("Cavalo", "Marron", "Vegetais", "campo", 100, 1.0f, 4, "Relincha" ));
+		zoo.addJaula(jaula4);
+		
+		
+		
+	//	System.out.println(peixe.dados());
+		//System.out.println("____________________________________________");
+		System.out.println(zoo.impressao());
+	}
+
+}

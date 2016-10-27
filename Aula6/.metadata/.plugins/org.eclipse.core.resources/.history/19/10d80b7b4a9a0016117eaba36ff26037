@@ -1,0 +1,54 @@
+package Exercicio1;
+
+public class nota {
+	
+	int valor;
+	int qtdSaldo;
+	int qtdSaque;
+	
+	
+	public nota(int valor, int qtdSaldo) 
+	{
+		
+		this.valor = valor;
+		this.qtdSaldo = qtdSaldo;
+	}
+	
+	public nota (int qtdSaque)
+	{
+		qtdSaldo = qtdSaldo - qtdSaque;
+	}
+	
+	public int getValor() 
+	{
+		return valor;
+	}
+	
+	public void setValor(int valor) 
+	{
+		this.valor = valor;
+	}
+	
+	public int getQtdSaldo() 
+	{
+		return qtdSaldo;
+	}
+	
+	public void setQtdSaldo(int qtdSaldo) 
+	{
+		this.qtdSaldo = qtdSaldo;
+	}
+	
+	public int getQtdSaque() 
+	{
+		return qtdSaque;
+	}
+	
+	public void setQtdSaque(int qtdSaque) 
+	{
+		this.qtdSaque = qtdSaque;
+	}
+	
+	
+
+}

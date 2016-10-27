@@ -1,0 +1,23 @@
+package Exercicio2;
+
+public class ContaCorrente extends Conta {
+
+	public ContaCorrente() 
+	{
+		super();
+	}
+	
+	
+	@Override
+	public void atualizar()
+	{
+		this.saldo += (this.saldo*0.5);
+	}
+	@Override
+	public void depositar(float valor)
+	{
+		this.saldo+=(valor-0.10);
+	}
+	
+
+}

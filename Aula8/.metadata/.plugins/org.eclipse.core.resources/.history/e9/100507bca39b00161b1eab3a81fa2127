@@ -1,0 +1,11 @@
+package Exercicio1;
+
+public class TesteAnimais {
+	
+	public void imprimeAnimais()
+	{
+		Peixe peixe = new Peixe("Tubarão", "Conzento", 300, 1.5f, "Mar", "Barbatana e cauda");
+		System.out.println(peixe.dados());
+	}
+
+}
