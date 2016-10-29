@@ -1,0 +1,20 @@
+package Exercicio1;
+
+import java.util.ArrayList;
+
+
+
+public class Agenda {
+	ArrayList<Contatos> contatos = new ArrayList<>();
+	
+	public Agenda() 
+	{
+		
+		
+	}
+	public void addContatos (Contatos contato)
+	{
+		contatos.add(contato);
+	}
+
+}

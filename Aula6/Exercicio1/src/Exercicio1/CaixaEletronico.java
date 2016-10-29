@@ -3,35 +3,31 @@ package Exercicio1;
 import java.util.ArrayList;
 
 public class CaixaEletronico {
-
+	 int saldo;
 	 ArrayList<Nota> nota = new ArrayList<Nota>();
-	 
-	 Nota notas2 = new Nota("notas2", 2, 4);
-	 Nota notas5 = new Nota("notas5", 5, 10);
-	 Nota notas10 = new Nota("notas10", 10, 0);
-	 Nota notas20 = new Nota("notas20", 20, 0);
-	 Nota notas50 = new Nota("notas30", 50, 0);
-	 
-	
-	 
 	 
 	 public CaixaEletronico()
 	 {
+		 Nota notas2 = new Nota("notas2", 2, 10);
+		 Nota notas5 = new Nota("notas5", 5, 10);
+		 Nota notas10 = new Nota("notas10", 10, 10);
+		 Nota notas20 = new Nota("notas20", 20, 10);
+		 Nota notas50 = new Nota("notas30", 50, 1);
+		 
 		 nota.add(notas2);
 		 nota.add(notas5);
 		 nota.add(notas10);
 		 nota.add(notas20);
 		 nota.add(notas50);
+		 saldo = 0;
 	 }
 	 	 
 	 public int calculaSaldo ()
 	 { 
-		 int saldo=0;
 		 for (int i= nota.size()-1;i>=0;--i)
 		 {
 			saldo += (nota.get(i).qtdSaldo * nota.get(i).valor); 
 		 }
-		 
 		 return saldo;
 	 }
 	
@@ -48,19 +44,24 @@ public class CaixaEletronico {
 					 nota.get(i).qtdSaldo -= (valor / nota.get(i).valor);
 					 nota.get(i).qtdSaque = (valor / nota.get(i).valor);
 					 valor = valor % nota.get(i).valor;
-					 if (nota.get(i).valor % 2 != 0 && (valor + nota.get(i).valor) % 2 == 0)
+
+					 if (nota.get(i).valor % 2 != 0 && (valor + nota.get(i).valor) % 2 == 0 )
 					 { 
-						 if(nota.get(i).qtdSaque>0)
-						 { 
-						 nota.get(i).qtdSaque -= 1;
-						 nota.get(i).qtdSaldo += 1;
-						 }
-						 valor = valor + nota.get(i).valor;
+						 valor += this.voltaNota(nota.get(i),valor);
 					 }
-					 retorno += ("Notas de " + nota.get(i).valor + ": " + nota.get(i).qtdSaque + "\n");
+					 if (nota.get(i).valor>=10 && valor == 1)
+					 {
+						 valor += this.voltaNota(nota.get(i),valor);
+					 }
+					 if (nota.get(i).qtdSaldo<nota.get(i).qtdSaque)
+					 {
+						 valor += this.voltaNota(nota.get(i),valor);
+					 }
 				 }
-			 }
+					 retorno += ("Notas de " + nota.get(i).valor + ": " + nota.get(i).qtdSaque + "\n");
+			 	}
 		 }
+	
 		if (verificaSaque(valorOriginal))
 		{
 			return retorno;
@@ -69,8 +70,6 @@ public class CaixaEletronico {
 		{
 			this.devolveValores();
 			return "Saque não efetuado";
-			
-			
 		}
 	 }
 	 
@@ -129,6 +128,16 @@ public class CaixaEletronico {
 		 }
 		 return retorno;
 	 }
+	 private int voltaNota(Nota nota, int valor)
+	 {
+		 if(nota.qtdSaque>0)
+		 { 
+			 nota.qtdSaque -= 1;
+		 	 nota.qtdSaldo += 1;
+		 }
+		 return nota.valor;
+		
+	 }
 }
 		 
 		 
@@ -141,41 +150,7 @@ public class CaixaEletronico {
 		 
 		 
 		 
-/*
- 		  if (nota.get(4).qtdSaldo>0)
-		  {
-			  nota.get(4).qtdSaldo -= (valor / 50);
-			  resto = valor % 50;	  
-		  }
-	
-		  if (nota.get(3).qtdSaldo>0 )
-		  {
-			  nota.get(3).qtdSaldo -= (resto / 20);
-			  resto = resto % 20;
-		  }
-		 
-		  if (nota.get(2).qtdSaldo>0 )
-		  {
-			  nota.get(2).qtdSaldo -= (resto / 10);
-			  resto = resto % 10;
-		  }
-		 	  
-		  if (nota.get(1).qtdSaldo>0 && resto % 5 == 0)
-		  {
-			  nota.get(1).qtdSaldo -= (resto / 5);
-			  resto = resto % 5;
-		  }
-		  if (nota.get(0).qtdSaldo>0 )
-		  {
-			  nota.get(0).qtdSaldo -= (resto/2);
-		  }
-		 	 return "Saque efetuado com Sucesso";
-	 	}
-	 	else
-	 	{
-	 		return ("Não possível realizar esta operação");
-	 	} 
-	 	*/
+
 		 
 	 
 

@@ -1,0 +1,28 @@
+package Exercicio1;
+
+public class ContatoPF extends Contatos {
+
+	private String cpf;
+
+	public ContatoPF(String nome, String telefone, String cpf) {
+		super(nome, telefone);
+		this.cpf = cpf;
+	}
+	
+	public String getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
+	@Override
+	public String imprimeContato() 
+	{
+		return super.imprimeContato() +  "\n CPF: " + cpf;
+	}
+
+	
+
+}

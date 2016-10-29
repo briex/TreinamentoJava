@@ -1,0 +1,11 @@
+package Exercicio1;
+
+public class Contatos {
+	
+	private String nome; 
+	private String telefone;
+
+	public Contatos(String nome, String telefone) {
+		this.nome = nome;
+		this.telefone = telefone;
+	}}

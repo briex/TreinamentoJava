@@ -1,0 +1,13 @@
+package Exercicio1;
+
+public class ContatoPJ extends Contatos{
+	
+	private String cnpj;
+
+	public ContatoPJ(String nome, String telefone, String cnpj) {
+		super(nome, telefone);
+		this.cnpj = cnpj;
+	}
+	
+
+}

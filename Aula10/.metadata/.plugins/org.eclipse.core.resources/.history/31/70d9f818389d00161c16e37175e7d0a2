@@ -1,0 +1,9 @@
+package Exercicio1;
+
+public class ContatoPF {
+
+	public ContatoPF() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

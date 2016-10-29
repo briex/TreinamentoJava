@@ -1,0 +1,9 @@
+package Exercicio1;
+
+public class Contatos {
+
+	public Contatos() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

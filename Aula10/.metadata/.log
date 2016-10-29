@@ -1,0 +1,36 @@
+!SESSION 2016-10-28 14:02:45.254 -----------------------------------------------
+eclipse.buildId=4.6.1.M20160907-1200
+java.version=1.8.0_60
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/Gabriel/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/Gabriel/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2016-10-28 14:03:51.129
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2016-10-28 15:19:59.764 -----------------------------------------------
+eclipse.buildId=4.6.1.M20160907-1200
+java.version=1.8.0_60
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -keyring /Users/Gabriel/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -data /Users/Gabriel/Documents/workspace/TreinamentoJava/Aula10 -product org.eclipse.epp.package.java.product -keyring /Users/Gabriel/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2016-10-28 15:20:04.483
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.e4.ui.css.core 4 0 2016-10-28 15:24:41.444
+!MESSAGE CSS property 'selected-tab-fill' has been deprecated: renamed as selected-tab-fill
+!SESSION 2016-10-28 15:24:56.354 -----------------------------------------------
+eclipse.buildId=4.6.1.M20160907-1200
+java.version=1.8.0_60
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/Gabriel/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/Gabriel/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2016-10-28 15:25:02.829
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.e4.ui.css.core 4 0 2016-10-28 15:25:04.073
+!MESSAGE CSS property 'selected-tab-fill' has been deprecated: renamed as selected-tab-fill
